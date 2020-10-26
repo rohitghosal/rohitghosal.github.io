@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<head>
 		<title>My Portfolio</title>
 		<link rel="shortcut icon" href="images/favicon.png">
@@ -7,6 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
 	</head>
 	<body class="is-preload">
 
@@ -49,7 +51,7 @@
 							<article class="post featured">
 								<header class="major">
 								
-									<p><h2><a href="#">My name is Rohit Ghosal</a></h2><h4><a href=""> Founder of Bingo Learnings</a></h4></p>
+									<p><h2><a style="color: #060C21;" href="#">My name is Rohit Ghosal</a></h2><h4><a id="gif" onmouseover="mouseOver()" onmouseout="mouseOut()" href="">Founder of Bingo Learnings</a></h4></p>
 									<p>I want to be a data scientist-cum-reasearcher as well as cybersecurity & penetration tester;interested in MERN Development(full stack), Flutter Development, Android
 									Development, Java Framework, Vanilla JavaScript, Data Visualization, Machine Learning, Deep Learning, Compiler Designing, Operating System Management.<br></p><P><b>Goal towards
 									Quantum Computing Analysis.</b></p>
@@ -135,21 +137,59 @@
 										<li><a href="https://github.com/rohitghosal/MyAwesomeCart" class="button">VIEW</a></li>
 									</ul>
 								</article>
-							</section>
+							</section>	
+								<section id="lomo" class="posts" style="display: none;">
+									<article>
+										<header>
+									
+											<h2><a href="https://github.com/rohitghosal/JS_Calculator">Project 7:<br />
+												JS Calculator</a></h2>
+										</header>
+										<a class="image fit"><img src="images/pr7.jpg" alt="" /></a>
+										<p>here we used JavaScript to build the calculator like web app</p>
+										<ul class="actions special">
+											<li><a href="https://github.com/rohitghosal/JS_Calculator" class="button">VIEW</a></li>
+										</ul>
+									</article>
+									<article>
+										<header>
+									
+											<h2><a href="https://github.com/rohitghosal/Python-Flask-Blog">Project 8:<br />Python-Flask Blog</a></h2>
+										</header>
+										<a class="image fit"><img src="images/pr8.jpg" alt="" /></a>
+										<p>This is a flask based blog whose frontend is created using bootstrap. If you have any questions or suggestions, feel
+										free to open an issue or pull request :).</p>
+										<ul class="actions special">
+											<li><a href="https://github.com/rohitghosal/Python-Flask-Blog" class="button">VIEW</a></li>
+										</ul>
+									</article>
+									<article>
+										<header>
+									
+											<h2><a href="https://github.com/rohitghosal/analog_clock_js">Project 9:<br />Analog JS clock</a></h2>
+										</header>
+										<a class="image fit"><img src="images/pr9.jpg" alt="" /></a>
+										<p>JavaScript web functionality is used here for responsive web analog clock</p>
+										<ul class="actions special">
+											<li><a href="https://github.com/rohitghosal/analog_clock_js" class="button">VIEW</a></li>
+										</ul>
+									</article>
+									<article>
+										<header>
+									
+											<h2><a href="https://github.com/rohitghosal/website-1">Project 10:<br />Fluttery Website</a></h2>
+										</header>
+										<a class="image fit"><img src="images/pr10.jpg" alt="" /></a>
+										<p>Website using flutter. visit and explore the beauty of flutter</p>
+										<ul class="actions special">
+											<li><a href="https://github.com/rohitghosal/website-1" class="button">VIEW</a></li>
+										</ul>
+									</article>
+								</section>
 
 						<!-- Footer -->
 							<footer>
-								<div class="pagination">
-									<!--<a href="#" class="previous">Prev</a>-->
-									<a href="#" class="page active">1</a>
-									<a href="#" class="page">2</a>
-									<a href="#" class="page">3</a>
-									<span class="extra">&hellip;</span>
-									<a href="#" class="page">8</a>
-									<a href="#" class="page">9</a>
-									<a href="#" class="page">10</a>
-									<a href="#" class="next">Next</a>
-								</div>
+								<button onclick="fn1()" id="btn1" >More</button>
 							</footer>
 
 					</div>
@@ -193,11 +233,11 @@
 							<section>
 								<h3>Social</h3>
 								<ul class="icons alt">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://twitter.com/imghosal1" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 									<li><a href="#" class="icon brands fa-youtube"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+									<li><a href="https://www.instagram.com/bingo_learnings/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://github.com/rohitghosal/" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+									<li><a href="https://www.linkedin.com/in/rohit-ghosal-a16488184/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 								</ul>
 							</section>
 						</section>
@@ -226,6 +266,28 @@
 						backSpeed: 60,
 						loop: true
 					});
+			</script>
+			<script>
+				function fn1() {
+					var cat = document.getElementById("lomo");
+					var btn = document.getElementById("btn1");
+					if(cat.style.display === "none"){
+						$("#lomo").fadeToggle(2000);
+						btn.innerHTML = "Less";
+					}
+					else{
+						$("#lomo").fadeToggle(1000);
+						btn.innerHTML = "More";
+					}
+				}
+
+				function mouseOver() {
+						document.getElementById("gif").innerHTML = "It Doesn't Teach, It Educates";
+					}
+
+				function mouseOut() {
+						document.getElementById("gif").innerHTML="Founder of Bingo Learnings";
+					}
 			</script>
 
 	</body>
